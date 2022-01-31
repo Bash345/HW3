@@ -1,0 +1,2165 @@
+{
+	"info": {
+		"_postman_id": "f07ba35a-b39b-43c4-bce6-58453b4a4f46",
+		"name": "HW3",
+		"description": "Convenors, modules and sessions app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "convenors",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "get a convenor by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/convenors/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"convenors",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"type": "string",
+											"description": "(Required) convenor id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "the convenor was not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/convenors/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"convenors",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "convenor",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/convenors/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"convenors",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "delete a convenor by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/convenors/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"convenors",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"type": "string",
+											"description": "(Required) convenor id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "the convenor was deleted successfully",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/convenors/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"convenors",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "the convenor was not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/convenors/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"convenors",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "get modules in a convenor",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/convenors/:id/modules",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"convenors",
+										":id",
+										"modules"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<integer>",
+											"type": "string",
+											"description": "(Required) convenor id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "this convenor's modules was returned",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/convenors/:id/modules",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"convenors",
+												":id",
+												"modules"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "the convenor was not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/convenors/:id/modules",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"convenors",
+												":id",
+												"modules"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Update an existing convenor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"position\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/convenors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"convenors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "convenor updated successfully",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"position\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/convenors",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"convenors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Invalid object convenor supplied",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"position\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/convenors",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"convenors"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Add a convenor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"position\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/convenors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"convenors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "convenor added successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"position\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/convenors",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"convenors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Invalid object convenor supplied",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"<integer>\",\n    \"name\": \"<string>\",\n    \"position\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/convenors",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"convenors"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "get all convenors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/convenors",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"convenors"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list of all convenors returned",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/convenors",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"convenors"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "bad request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/convenors",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"convenors"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "modules",
+			"item": [
+				{
+					"name": "{code}",
+					"item": [
+						{
+							"name": "sessions",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "get a session in a module",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/modules/:code/sessions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"modules",
+														":code",
+														"sessions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "code",
+															"value": "<string>",
+															"type": "string",
+															"description": "(Required) module code"
+														},
+														{
+															"key": "id",
+															"value": "<integer>",
+															"type": "string",
+															"description": "(Required) session id"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "a session in this module is returned",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/modules/:code/sessions/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"modules",
+																":code",
+																"sessions",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "code"
+																},
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "The module or session was not found",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/modules/:code/sessions/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"modules",
+																":code",
+																"sessions",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "code"
+																},
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "delete a session in a module",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/modules/:code/sessions/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"modules",
+														":code",
+														"sessions",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "code",
+															"value": "<string>",
+															"type": "string",
+															"description": "(Required) module code"
+														},
+														{
+															"key": "id",
+															"value": "<integer>",
+															"type": "string",
+															"description": "(Required) session id"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "the session in this module was deleted",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/modules/:code/sessions/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"modules",
+																":code",
+																"sessions",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "code"
+																},
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												},
+												{
+													"name": "The module or session was not found",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/modules/:code/sessions/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"modules",
+																":code",
+																"sessions",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "code"
+																},
+																{
+																	"key": "id"
+																}
+															]
+														}
+													},
+													"status": "Not Found",
+													"code": 404,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "get sessions in a module",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/modules/:code/sessions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"modules",
+												":code",
+												"sessions"
+											],
+											"variable": [
+												{
+													"key": "code",
+													"value": "<string>",
+													"type": "string",
+													"description": "(Required) module code"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "this module's sessions was returned",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/modules/:code/sessions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"modules",
+														":code",
+														"sessions"
+													],
+													"variable": [
+														{
+															"key": "code"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "the module was not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/modules/:code/sessions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"modules",
+														":code",
+														"sessions"
+													],
+													"variable": [
+														{
+															"key": "code"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "add a session in a module",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": \"<integer>\",\n    \"topic\": \"<string>\",\n    \"datetime\": \"<dateTime>\",\n    \"duration\": \"<integer>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/modules/:code/sessions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"modules",
+												":code",
+												"sessions"
+											],
+											"variable": [
+												{
+													"key": "code",
+													"value": "<string>",
+													"type": "string",
+													"description": "(Required) module code"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "session added successfully",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": \"<integer>\",\n    \"topic\": \"<string>\",\n    \"datetime\": \"<dateTime>\",\n    \"duration\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/modules/:code/sessions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"modules",
+														":code",
+														"sessions"
+													],
+													"variable": [
+														{
+															"key": "code"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Invalid session  object supplied",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": \"<integer>\",\n    \"topic\": \"<string>\",\n    \"datetime\": \"<dateTime>\",\n    \"duration\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/modules/:code/sessions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"modules",
+														":code",
+														"sessions"
+													],
+													"variable": [
+														{
+															"key": "code"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "update a session in a module",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": \"<integer>\",\n    \"topic\": \"<string>\",\n    \"datetime\": \"<dateTime>\",\n    \"duration\": \"<integer>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/modules/:code/sessions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"modules",
+												":code",
+												"sessions"
+											],
+											"variable": [
+												{
+													"key": "code",
+													"value": "<string>",
+													"type": "string",
+													"description": "(Required) module code"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Invalid session  object supplied",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": \"<integer>\",\n    \"topic\": \"<string>\",\n    \"datetime\": \"<dateTime>\",\n    \"duration\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/modules/:code/sessions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"modules",
+														":code",
+														"sessions"
+													],
+													"variable": [
+														{
+															"key": "code"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "session updated successfully",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": \"<integer>\",\n    \"topic\": \"<string>\",\n    \"datetime\": \"<dateTime>\",\n    \"duration\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/modules/:code/sessions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"modules",
+														":code",
+														"sessions"
+													],
+													"variable": [
+														{
+															"key": "code"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "update a session in a module",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": \"<integer>\",\n    \"topic\": \"<string>\",\n    \"datetime\": \"<dateTime>\",\n    \"duration\": \"<integer>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/modules/:code/sessions",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"modules",
+												":code",
+												"sessions"
+											],
+											"variable": [
+												{
+													"key": "code",
+													"value": "<string>",
+													"type": "string",
+													"description": "(Required) module code"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Invalid session  object supplied",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": \"<integer>\",\n    \"topic\": \"<string>\",\n    \"datetime\": \"<dateTime>\",\n    \"duration\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/modules/:code/sessions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"modules",
+														":code",
+														"sessions"
+													],
+													"variable": [
+														{
+															"key": "code"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "session updated successfully",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": \"<integer>\",\n    \"topic\": \"<string>\",\n    \"datetime\": \"<dateTime>\",\n    \"duration\": \"<integer>\"\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/modules/:code/sessions",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"modules",
+														":code",
+														"sessions"
+													],
+													"variable": [
+														{
+															"key": "code"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "get a module by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/modules/:code",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"modules",
+										":code"
+									],
+									"variable": [
+										{
+											"key": "code",
+											"value": "<string>",
+											"type": "string",
+											"description": "(Required) module id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "module",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/modules/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"modules",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "the module was not found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/modules/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"modules",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "delete a module by id",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/modules/:code",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"modules",
+										":code"
+									],
+									"variable": [
+										{
+											"key": "code",
+											"value": "<string>",
+											"type": "string",
+											"description": "(Required) module id"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "the module was deleted successfully",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/modules/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"modules",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "the module was not found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/modules/:code",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"modules",
+												":code"
+											],
+											"variable": [
+												{
+													"key": "code"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "get a list of all modules",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/modules",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"modules"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list of all modules returned",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/modules",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"modules"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "bad request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/modules",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"modules"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "create a module",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"<string>\",\n    \"title\": \"<string>\",\n    \"level\": \"<integer>\",\n    \"optional\": \"<boolean>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/modules",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"modules"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Invalid module  object supplied",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\": \"<string>\",\n    \"title\": \"<string>\",\n    \"level\": \"<integer>\",\n    \"optional\": \"<boolean>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/modules",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"modules"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "module added successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\": \"<string>\",\n    \"title\": \"<string>\",\n    \"level\": \"<integer>\",\n    \"optional\": \"<boolean>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/modules",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"modules"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "update a module",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"<string>\",\n    \"title\": \"<string>\",\n    \"level\": \"<integer>\",\n    \"optional\": \"<boolean>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/modules",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"modules"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Invalid module  object supplied",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\": \"<string>\",\n    \"title\": \"<string>\",\n    \"level\": \"<integer>\",\n    \"optional\": \"<boolean>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/modules",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"modules"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "module updated successfully",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"code\": \"<string>\",\n    \"title\": \"<string>\",\n    \"level\": \"<integer>\",\n    \"optional\": \"<boolean>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/modules",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"modules"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "sessions",
+			"item": [
+				{
+					"name": "delete all sessions",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sessions",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sessions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "all sessions were deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sessions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sessions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "bad request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sessions",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sessions"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "get a list of sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "module",
+									"value": "<string>",
+									"description": "module code"
+								},
+								{
+									"key": "convenor",
+									"value": "<integer>",
+									"description": "convenor id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "specified sessions returned",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sessions"
+									],
+									"query": [
+										{
+											"key": "module",
+											"value": "<string>"
+										},
+										{
+											"key": "convenor",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "specified module or convenor not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sessions"
+									],
+									"query": [
+										{
+											"key": "module",
+											"value": "<string>"
+										},
+										{
+											"key": "convenor",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "get a list of sessions Copy 3",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "module",
+									"value": "<string>",
+									"description": "module code"
+								},
+								{
+									"key": "convenor",
+									"value": "<integer>",
+									"description": "convenor id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "specified module or convenor not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sessions"
+									],
+									"query": [
+										{
+											"key": "module",
+											"value": "<string>"
+										},
+										{
+											"key": "convenor",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "specified sessions returned",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sessions"
+									],
+									"query": [
+										{
+											"key": "module",
+											"value": "<string>"
+										},
+										{
+											"key": "convenor",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "get a list of sessions Copy 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "module",
+									"value": "<string>",
+									"description": "module code"
+								},
+								{
+									"key": "convenor",
+									"value": "<integer>",
+									"description": "convenor id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "specified module or convenor not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sessions"
+									],
+									"query": [
+										{
+											"key": "module",
+											"value": "<string>"
+										},
+										{
+											"key": "convenor",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "specified sessions returned",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sessions"
+									],
+									"query": [
+										{
+											"key": "module",
+											"value": "<string>"
+										},
+										{
+											"key": "convenor",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "get a list of sessions Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "module",
+									"value": "<string>",
+									"description": "module code"
+								},
+								{
+									"key": "convenor",
+									"value": "<integer>",
+									"description": "convenor id"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "specified module or convenor not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sessions"
+									],
+									"query": [
+										{
+											"key": "module",
+											"value": "<string>"
+										},
+										{
+											"key": "convenor",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "specified sessions returned",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/sessions?module=<string>&convenor=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"sessions"
+									],
+									"query": [
+										{
+											"key": "module",
+											"value": "<string>"
+										},
+										{
+											"key": "convenor",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
